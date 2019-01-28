@@ -1,1 +1,8 @@
 <p>Hello from homepage.hbs</p>
+{{#if game}}
+  <ul class="games">
+    {{#each game}}
+       {{> 'game'}}
+    {{/each}}
+  </ul>
+{{/if}}
