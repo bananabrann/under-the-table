@@ -5,4 +5,7 @@ const homepageController = require("../controllers/homepage-controller")
 
 router.get("/", homepageController.show)
 
+router.get("/games/new", gamesController.create)
+router.get("/games/:id", gamesController.show)
+
 module.exports = router;
