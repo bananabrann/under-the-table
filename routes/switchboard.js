@@ -1,13 +1,8 @@
 const express = require("express");
 const router = express.Router();
+const gamesController = require('../controllers/games-controller')
+const homepageController = require("../controllers/homepage-controller")
 
-// router.use("/", require("../controllers/frontpage").index);
-
-router.get("/", (req, res) => {
-    res.render("homepage");
-});
-
-
-// router.get("/", require("../controllers/frontpage").show);
+router.get("/", homepageController.show)
 
 module.exports = router;
