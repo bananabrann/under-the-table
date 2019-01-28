@@ -10,8 +10,6 @@ app.use(cors());
 app.use(parser.urlencoded({ extended: true }));
 app.use(parser.json());
 
-// const switchboardRouter = require('./routes/switchboard')
-// app.use(switchboardRouter)
 app.use(require("./routes/switchboard"));
 
 app.listen(3000, () => {
