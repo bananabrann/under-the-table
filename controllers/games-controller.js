@@ -8,35 +8,12 @@ module.exports = {
     // })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       Game.findOne({ _id: req.params.id }).populate("title game.title").exec(function(err, g) {
           res.render("game/show", g)
       })
 
 
   },
-
-
-
-
-      
     //   res.send("hello")
 
       

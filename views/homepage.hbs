@@ -1,8 +1,21 @@
 <p>Hello from homepage.hbs</p>
-{{#if game}}
-  <ul class="games">
-    {{#each game}}
-       {{> 'game'}}
+{{!-- {{#if games}}
+<ul class="games">
+    {{#each games}}
+    {{'game'}}
     {{/each}}
-  </ul>
+</ul>
+{{/if}} --}}
+
+
+{{#if games}}
+<ul class="games">
+    <p>game ul be here</p>
+    {{#each Games}}
+        <p>game be here</p>
+        <a href='/games/{{_id}}'>
+            <p>{{ content }}</p>
+        </a>
+    {{/each}}
+</ul>
 {{/if}}
