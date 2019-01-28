@@ -12,8 +12,13 @@ app.use(parser.json());
 
 app.use(require("./routes/switchboard"));
 
+app.set('view engine', 'pug')
+app.set('views', './views')
+
+
+
 app.listen(3000, () => {
-  console.log("Live on port 3000...");
+  console.log("Live on port 3000!");
 });
 
 // module.exports = router
