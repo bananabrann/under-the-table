@@ -21,5 +21,11 @@ module.exports = {
   },
   create: (req, res) => {
     res.render("./games/new");
+  },
+  update: (req,res) => {
+      // updating the game
+  },
+  destroy: (req,res) => {
+      // removes game
   }
 };
