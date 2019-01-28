@@ -27,14 +27,3 @@ module.exports = {
   Comment: mongoose.model("Comment", CommentSchema),
   mongoose
 };
-
-
-// var UserSchema = mongoose.Schema({
-//     email              : String,
-//     password           : String,
-//     isFacebookAccount  : Boolean
-// });
-
-// UserModel = mongoose.model("Users", UserSchema);
-
-// module.exports = UserModel;

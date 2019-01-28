@@ -5,6 +5,18 @@ module.exports = {
     //   Game.find({}).populate('title').then(games => {
     //       res.render("layout")
     //   })
-    res.render("layout");
+    // res.render("layout");
+
+    // Game.find({})
+    //   .then(game => {
+    //     res.json(game);
+    //   })
+    //   .catch(err => {
+    //     console.log(err);
+    //   });
+
+    Game.find({}).then(games => {
+        res.render("app/index", { games })
+    })
   }
 };
