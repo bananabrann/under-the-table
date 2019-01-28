@@ -8,7 +8,8 @@ app.use(cors());
 app.use(parser.urlencoded({ extended: true }));
 app.use(parser.json());
 
-app.set("view engine", "pug");
+// app.set("view engine", "pug");
+app.set("view engine", "hbs")
 app.set("views", "./views");
 
 app.use(require("./routes/switchboard"));
