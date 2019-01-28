@@ -2,6 +2,7 @@ const { Game } = require("../models/Game");
 
 module.exports = {
   show: (req, res) => {
-    res.render("homepage");
+    // res.render("layout");
+    res.send("hi")
   }
 };
