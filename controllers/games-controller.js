@@ -6,7 +6,7 @@ module.exports = {
   },
   create: (req, res) => {
     // res.render("./games/new");
-    res.send("posted!")
+    res.send(req.body)
   },
   update: (req,res) => {
       // updating the game
