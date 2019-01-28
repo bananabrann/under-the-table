@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const CommentSchema = new Schema({
+const Comment = new Schema({
   content: String,
   createdAt: {
     type: Date,
@@ -9,7 +9,7 @@ const CommentSchema = new Schema({
   }
 });
 
-const GameSchema = new Schema({
+const Game = new Schema({
   title: String,
   description: String,
   rating: String,
@@ -18,12 +18,12 @@ const GameSchema = new Schema({
   // will have two options for someone to select: 1) Party or 2) Strategy
   compness: String,
   // (^ is competitiveness) will have two options for someone to select: 1) PvP, 2) Co-op or 3) Mix
-  comments: [CommentSchema]
+  comments: [Comment]
 });
 
 
 module.exports = {
-  Game: mongoose.model("Game", GameSchema),
-  Comment: mongoose.model("Comment", CommentSchema),
+  Game: mongoose.model("Game", Game),
+  Comment: mongoose.model("Comment", Comment),
   mongoose
 };
