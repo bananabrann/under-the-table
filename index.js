@@ -1,26 +1,53 @@
 const express = require("express");
+const hbs = require("hbs");
+const flash = require("connect-flash");
+const cookieParser = require("cookie-parser");
+const bodyParser = require("body-parser");
+const session = require("express-session");
+const methodOverride = require("method-override");
 const app = express();
-// const mongoose = require("mongoose");
-const parser = require("body-parser");
-const cors = require("cors");
-// const JSON = require("circular-json");
-const methodOveride = require("method-override");
+const passport = require("passport");
+const LocalStrategy = require("passport-local").Strategy;
+const User = require("./models/User");
 
-app.use(cors());
-app.use(parser.urlencoded({ extended: true }));
-app.use(parser.json());
+passport.use(
+  "signup",
+  new LocalStrategy(
+    {
+      usernameField: "email",
+      passwordField: "password"
+    },
+    function(email, password, done) {
+      console.log(email, password);
+      done("email");
+    }
+  )
+);
 
-// app.set("view engine", "pug");
+passport.serializeUser(function(user, done) {
+  done(null, user.id);
+});
 
+passport.deserializeUser(function(id, done) {
+  User.findById(id)
+    .then(user => {
+      if (user) {
+        done(null, user);
+      }
+    })
+    .catch(err => {
+      done(err);
+    });
+});
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+hbs.registerPartials(__dirname + "/views/partials");
 app.use(express.static("public"));
 app.set("view engine", "hbs");
-app.set("views", "./views");
-app.use(methodOveride("_method"));
+app.use(methodOverride("_method"));
 
 app.use(require("./routes/switchboard"));
 
-app.listen(3000, () => {
-  console.log("Live on port 3000!");
-});
-
-// module.exports = router
+app.listen(3000, () => console.log("server is running"));

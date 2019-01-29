@@ -2,9 +2,14 @@
     hello from games/new.hbs
 </p>
 
-<form action="/games/new" method="POST">
-  <input type="text" placeholder="title" name="title">
-  <br>
-  <textarea type="text" name="description"> </textarea>
-  <button type="submit">Submit</button>
-</form>
+<section class="form-container">
+  <h4>New Game</h4>
+  <form action="/games" method="post" class="game-form">
+    <p class="input-field">
+      <textarea name="game[content]" cols="30" rows="10" placeholder="Message"></textarea>
+    </p>
+    <p class="input-field">
+      <input type="submit" value="Game" class="btn waves-effect waves-light">
+    </p>
+  </form>
+</section>

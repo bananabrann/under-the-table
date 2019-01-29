@@ -1,31 +1,30 @@
 <p>Hello from index.hbs!</p>
 
 <h3>detecting if games is true...</h3>
-    {{#if games}}
-    <li>true detected</p>
+{{#if games}}
+<li>true detected</p>
     {{/if}}
-<p>test complete</p>
-<br>
+    <p>test complete</p>
+    <br>
 
-<h3>attempting to write games...</h3>
+    <h3>attempting to write games...</h3>
     {{ games }}
-<p>test complete</p>
-<br>
+    <p>test complete</p>
+    <br>
 
-<h3>attempting to log #each in games...</h3>
-{{#each games}}
+    <h3>attempting to log #each in games...</h3>
+    {{#each games}}
     <p>a game has been written!</p>
-{{/each}}
-<p>test complete</p>
-
-{{!-- {{#if Game}}
-<ul class="games">
-    <p>game ul be here</p>
-    {{#each Games}}
-        <p>game be here</p>
-        <a href='/games/{{_id}}'>
-            <p>{{ content }}</p>
-        </a>
     {{/each}}
-</ul>
-{{/if}} --}} 
+    <p>test complete</p>
+    <br>
+
+    <h1>Express Twitter integration:</h1>
+    {{#if games}}
+    <ul class="games">
+        {{#each games}}
+        {{!-- {{> 'game'}} --}}
+            <li>{{title}}</li>
+        {{/each}}
+    </ul>
+    {{/if}}
