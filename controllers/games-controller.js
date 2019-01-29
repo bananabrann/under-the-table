@@ -2,11 +2,6 @@ const { Game } = require("../models/Game");
 
 module.exports = {
   show: (req, res) => {
-    // express-api-lab
-    // Game.find({}).then(game => {
-    //     res.json(game)
-    // })
-
     res.render("./games/new");
   },
   create: (req, res) => {
@@ -18,7 +13,6 @@ module.exports = {
     url: req.body.url
     })
     res.redirect('/')
-    // res.send(req.body);
   },
   update: (req, res) => {
     // updating the game
