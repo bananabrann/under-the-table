@@ -2,29 +2,34 @@
 
 <h3>detecting if games is true...</h3>
 {{#if games}}
-<li>true detected</p>
-    {{/if}}
-    <p>test complete</p>
-    <br>
+<p>true detected</p>
+{{/if}}
+<p>test complete</p>
+<br>
 
-    <h3>attempting to write games...</h3>
-    {{ games }}
-    <p>test complete</p>
-    <br>
+<h3>attempting to write games...</h3>
+{{ games }}
+<p>test complete</p>
+<br>
 
-    <h3>attempting to log #each in games...</h3>
+<h3>attempting to log #each in games...</h3>
+{{#each games}}
+<p>a game has been written!</p>
+{{/each}}
+<p>test complete</p>
+<br>
+
+{{#if games}}
+<ul class="games">
     {{#each games}}
-    <p>a game has been written!</p>
-    {{/each}}
-    <p>test complete</p>
-    <br>
-
-    <h1>Express Twitter integration:</h1>
-    {{#if games}}
-    <ul class="games">
-        {{#each games}}
+    <div class="game-block">
+        <div class="game-block-header">
+            <h4>{{ title }}</h4>
+            <h2>Stars: {{ rating }}</h2>
+        </div>
+        <p>{{description}}</p>
         {{!-- {{> 'game'}} --}}
-            <li>{{title}}</li>
-        {{/each}}
-    </ul>
-    {{/if}}
+    </div>
+    {{/each}}
+</ul>
+{{/if}}

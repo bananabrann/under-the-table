@@ -43,7 +43,7 @@ passport.deserializeUser(function(id, done) {
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(express.static(__dirname + '/public'))
+app.use(express.static(__dirname + "/public"));
 
 hbs.registerPartials(__dirname + "/views/partials");
 // app.use(express.static("public"));
