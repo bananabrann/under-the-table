@@ -1,6 +1,22 @@
 <p>Hello from index.hbs!</p>
 
-{{!-- {{ Game }} --}}
+<h3>detecting if games is true...</h3>
+    {{#if games}}
+    <li>true detected</p>
+    {{/if}}
+<p>test complete</p>
+<br>
+
+<h3>attempting to write games...</h3>
+    {{ games }}
+<p>test complete</p>
+<br>
+
+<h3>attempting to log #each in games...</h3>
+{{#each games}}
+    <p>a game has been written!</p>
+{{/each}}
+<p>test complete</p>
 
 {{!-- {{#if Game}}
 <ul class="games">
