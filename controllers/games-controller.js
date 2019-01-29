@@ -1,6 +1,14 @@
 const { Game } = require("../models/Game");
 
 module.exports = {
+    showOne: (req, res) => {
+        res.render("./games/show-one")
+    },
+    showAll: (req, res) => {
+        Game.find({}).then(games => {
+            res.render('./games/show-all', { games })
+        })
+    },
   show: (req, res) => {
     res.render("./games/new");
   },
