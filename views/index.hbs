@@ -1,4 +1,20 @@
 <p>Hello from index.hbs!</p>
+{{#if games}}
+<ul class="games">
+    {{#each games}}
+    <div class="game-block">
+        <div class="game-block-header">
+            <h4>{{ title }}</h4>
+            <h2>Stars: {{ rating }}</h2>
+        </div>
+        <p>{{description}}</p>
+        {{!-- {{> 'game'}} --}}
+    </div>
+    {{/each}}
+</ul>
+{{/if}}
+
+<h1>TESTS</h1>
 
 <h3>detecting if games is true...</h3>
 {{#if games}}
@@ -18,18 +34,3 @@
 {{/each}}
 <p>test complete</p>
 <br>
-
-{{#if games}}
-<ul class="games">
-    {{#each games}}
-    <div class="game-block">
-        <div class="game-block-header">
-            <h4>{{ title }}</h4>
-            <h2>Stars: {{ rating }}</h2>
-        </div>
-        <p>{{description}}</p>
-        {{!-- {{> 'game'}} --}}
-    </div>
-    {{/each}}
-</ul>
-{{/if}}
