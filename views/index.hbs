@@ -1,24 +1,36 @@
-<p>Hello from homepage.hbs</p>
-{{!-- {{#if games}}
+<p>Hello from index.hbs!</p>
+{{#if games}}
 <ul class="games">
     {{#each games}}
-    {{'game'}}
-    {{/each}}
-</ul>
-{{/if}} --}}
-
-
-
-{{ Game }}
-
-{{#if Game}}
-<ul class="games">
-    <p>game ul be here</p>
-    {{#each Games}}
-        <p>game be here</p>
-        <a href='/games/{{_id}}'>
-            <p>{{ content }}</p>
-        </a>
+    <div class="game-block">
+        <div class="game-block-header">
+            <h4>{{ title }}</h4>
+            <h2>Stars: {{ rating }}</h2>
+        </div>
+        <p>{{description}}</p>
+        {{!-- {{> 'game'}} --}}
+    </div>
     {{/each}}
 </ul>
 {{/if}}
+
+<h1>TESTS</h1>
+
+<h3>detecting if games is true...</h3>
+{{#if games}}
+<p>true detected</p>
+{{/if}}
+<p>test complete</p>
+<br>
+
+<h3>attempting to write games...</h3>
+{{ games }}
+<p>test complete</p>
+<br>
+
+<h3>attempting to log #each in games...</h3>
+{{#each games}}
+<p>a game has been written!</p>
+{{/each}}
+<p>test complete</p>
+<br>

@@ -18,6 +18,10 @@ const gameSchema = new Schema({
   // will have two options for someone to select: 1) Party or 2) Strategy
   compness: String,
   // (^ is competitiveness) will have two options for someone to select: 1) PvP, 2) Co-op or 3) Mix
+  author: {
+      type: Schema.Types.ObjectId,
+      ref: "User"
+  },
   comments: [commentSchema]
 });
 
