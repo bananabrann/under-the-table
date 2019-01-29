@@ -2,16 +2,28 @@ const { Game } = require("../models/Game");
 
 module.exports = {
   show: (req, res) => {
-    res.render('./games/new')
+    // express-api-lab
+    // Game.find({}).then(game => {
+    //     res.json(game)
+    // })
+
+    res.render("./games/new");
   },
   create: (req, res) => {
     // res.render("./games/new");
-    res.send(req.body)
+
+    // express-api-lab
+    Game.create({
+    name: req.body.name,
+    url: req.body.url
+    })
+    res.redirect('/')
+    // res.send(req.body);
   },
-  update: (req,res) => {
-      // updating the game
+  update: (req, res) => {
+    // updating the game
   },
-  destroy: (req,res) => {
-      // removes game
+  destroy: (req, res) => {
+    // removes game
   }
 };
