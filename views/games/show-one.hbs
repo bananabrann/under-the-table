@@ -16,13 +16,28 @@
 <div class="comments-section">
     <h2>Comments</h2>
 
+    {{!-- {{#if currentUser }} --}}
     <div class="add-comment-section">
         <h3>Join the Conversation</h3>
+
+        <form method="POST" action="/games/{{games._id}}" class="row">
+            <p class="add-comment-input-field">
+                {{!-- <label for="content"></label> --}}
+                <input type="text" name="games[comments.content]" id="">
+            </p>
+            <p class="add-comment-submit-btn">
+                <input class="btn" type="submit" value="Submit">
+            </p>
+        </form>
+{{!-- 
         <textarea>Insert your comment here (Not Functional)</textarea>
         <br>
-        <button>Add A Comment (Not Functional)</button>
+        <button>Add A Comment (Not Functional)</button> --}}
+
         {{!-- add the ability to add a comment, remove a comment --}}
     </div>
+
+    {{!-- {{/if}} --}}
 
     <br>
 
