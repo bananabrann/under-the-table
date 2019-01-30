@@ -49,5 +49,6 @@ app.set("view engine", "hbs");
 app.use(methodOverride("_method"));
 
 app.use(require("./routes/switchboard"));
+// app.use(require("./controllers/nav-controller"));
 
 app.listen(3000, () => console.log("server is running"));
