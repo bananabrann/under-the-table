@@ -21,6 +21,22 @@ module.exports = {
   },
   create: (req, res) => {
       // create a thing
+      Game.create({
+          title: req.body.games.content,
+          description: req.body.games.description,
+          type: req.body.games.type,
+        //   author: req.user._id,
+          compness: req.body.games.compness
+      })
+    //   .then(newGame => {
+    //       res.redirect(`/games/${newGame._id}`)
+    //   })
+    //   .then(result => {
+    //       req.user.games.push(result)
+    //       req.user.save(err => {
+    //           res.redirect(`/games/${games.id}`)
+    //       })
+    //   })
   },
   update: (req, res) => {
     // updating the game

@@ -48,6 +48,13 @@ app.use(express.static("public"));
 app.set("view engine", "hbs");
 app.use(methodOverride("_method"));
 
+app.use(
+  bodyParser.urlencoded({
+    extended: true
+  })
+);
+app.use(bodyParser.json());
+
 app.use(require("./routes/switchboard"));
 // app.use(require("./controllers/nav-controller"));
 
