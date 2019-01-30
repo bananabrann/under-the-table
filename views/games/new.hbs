@@ -16,6 +16,7 @@
         <span class="new-game-input-field" id="input-rating">
             <h3 class="new-game-subtitle">Rating:</h3>
             <select name="games[rating]" form="new-game-form">
+                <option selected disabled>Select A Rating</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -24,7 +25,8 @@
 
         <span class="new-game-input-field" id="input-type">
             <h3 class="new-game-subtitle">Type:</h3>
-            <select name="type" form="new-game-form">
+            <select name="games[type]" form="new-game-form">
+                <option selected disabled>Select A Type</option>
                 <option value="party">Party</option>
                 <option value="strategy">Strategy</option>
             </select>
@@ -32,9 +34,10 @@
 
         <span class="new-game-input-field" id="input-compness">
             <h3 class="new-game-subtitle">Competitiveness:</h3>
-            <select name="compness" form="new-game-form">
-                <option value="co-op">Co-op</option>
-                <option value="pvp">PvP</option>
+            <select name="games[compness]" form="new-game-form">
+                <option selected disabled>Select Playstyle</option>
+                <option value="Co-op">Co-op</option>
+                <option value="Pvp">PvP</option>
             </select>
         </span>
 
