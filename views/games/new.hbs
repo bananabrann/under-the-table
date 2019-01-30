@@ -6,36 +6,39 @@
     <h4>New Game</h4>
     <form action="/games" method="post" id="new-game-form">
         <div class="new-game-input-field" id="input-title">
-            <h3>Title:</h3> <input type="text" name="game[title]">
+            <h3 class="new-game-subtitle">Title:</h3> <input type="text" name="game[title]">
         </div>
+
         <div class="new-game-input-field" id="input-description">
-            <h3>Description:</h3><textarea name="game[content]" cols="30" rows="10" placeholder="Message"></textarea>
+            <h3 class="new-game-subtitle">Description:</h3><textarea name="game[content]" cols="30" rows="10" placeholder="Description"></textarea>
         </div>
+
         <span class="new-game-input-field" id="input-rating">
-            <h3>Rating:</h3>
+            <h3 class="new-game-subtitle">Rating:</h3>
             <select name="rating" form="new-game-form">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
             </select>
         </span>
+
         <span class="new-game-input-field" id="input-type">
-            <h3>Type:</h3>
+            <h3 class="new-game-subtitle">Type:</h3>
             <select name="type" form="new-game-form">
                 <option value="party">Party</option>
                 <option value="game">Game</option>
             </select>
         </span>
+
         <span class="new-game-input-field" id="input-compness">
-            <h3>Competitiveness:</h3>
+            <h3 class="new-game-subtitle">Competitiveness:</h3>
             <select name="compness" form="new-game-form">
                 <option value="co-op">Co-op</option>
                 <option value="pvp">PvP</option>
             </select>
-
         </span>
 
-
-        <input type="submit" value="Submit" class="btn waves-effect waves-light">
+        <br>
+        <input type="submit" value="Submit" class="btn">
     </form>
 </section>
