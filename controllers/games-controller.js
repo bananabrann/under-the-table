@@ -2,28 +2,25 @@ const { Game } = require("../models/Game");
 
 module.exports = {
   showOne: (req, res) => {
-      Game.findOne({ "_id": req.params.id }).then(games => {
-        // res.send(oneGame)
-          res.render("./games/show-one", {games})
-      })
+    Game.findOne({ _id: req.params.id }).then(games => {
+      // res.send(oneGame)
+      res.render("./games/show-one", { games });
+    });
   },
   showAll: (req, res) => {
-    Game.find({}).then(games => {
-      res.render("./games/show-all", { games });
-    });
+    Game.find({})
+      .then(games => {
+        res.render("./games/show-all", { games });
+      })
+      .catch(err => console.log(err));
   },
-  show: (req, res) => {
-    res.render("./games/new");
+  showNewPage: (req, res) => {
+    console.log("showNewGameScreen activated");
+    res.render("./games/new")
+    // res.send("hi!")
   },
   create: (req, res) => {
-    // res.render("./games/new");
-
-    // express-api-lab
-    Game.create({
-      name: req.body.name,
-      url: req.body.url
-    });
-    res.redirect("/");
+      // create a thing
   },
   update: (req, res) => {
     // updating the game
