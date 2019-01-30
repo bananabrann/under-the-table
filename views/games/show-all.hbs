@@ -1,0 +1,16 @@
+<p>Hello from show-all.hbs!</p>
+<h3>Full Games List</h3>
+{{#if games}}
+<ul class="games">
+    {{#each games}}
+    <div class="game-block">
+        <div class="game-block-header">
+            <h4>{{ title }}</h4>
+            <h2>Stars: {{ rating }}</h2>
+        </div>
+        <p>{{description}}</p>
+        {{!-- {{> 'game'}} --}}
+    </div>
+    {{/each}}
+</ul>
+{{/if}}
