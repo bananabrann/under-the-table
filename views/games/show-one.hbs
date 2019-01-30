@@ -4,59 +4,46 @@
     {{> 'game'}}
 </p> --}}
 
-<div class="game-partial">
-    <div class="content">
-        <h1>
-            {{!-- <a class="game-title" href="{{id}}"> --}}
-                {{oneGame.title}}
+<div class="game-area">
+    <h1>
+        {{!-- <a class="game-title" href="{{id}}"> --}}
+            {{oneGame.title}}
             {{!-- </a> --}}
-        </h1>
-    </div>
+    </h1>
+    <span class="rating">Rating: {{oneGame.rating}}</span>
+    <p>{{oneGame.description}}</p>
     {{!-- <div class="actions">
         <a href="/games/{{ author.id }}" class="">
             {{author.local.email}}</a> --}}
         {{!-- <span class="game__date">{{ oneGame.createdAt }}</span> --}}
         {{!-- <span class="game_comments">{{ comments.length }} Comments</span> --}}
-    </div>
+        {{!-- </div> --}}
 </div>
-{{oneGame.comments}}
 
+<div class="comments-section">
+    <h2>Comments</h2>
 
-{{#if oneGame.comments.length}}
-{{#each comments}}
-<div class="card">
-    <div class="card-content">
-        <span class="card-title">
-            {{ content }}
-        </span>
+    <div class="add-comment-section">
+        <h3>Join the Conversation</h3>
+        <textarea>Insert your comment here (Not Functional)</textarea>
+        <br>
+        <button>Add A Comment (Not Functional)</button>
+        {{!-- add the ability to add a comment, remove a comment --}}
     </div>
-    {{!-- this code is from Express Twitter --}}
-    <div class="card-action">
-        <a href="/user/{{ author.id }}" class="">{{ author.local.email }}</a>
-        <span class="tweet__date">{{ createdAt }}</span>
+
+    <br>
+
+    {{#each oneGame.comments}}
+    <div class="individual-comments">
+        <div class="individual-comments-content">
+            {{content}}
+        </div>
+        <div class="individual-comments-stats">
+            <a href="/user/{{ author.id }}" class="">{{ author.local.email }}</a>
+            <span class="tweet__date">{{ createdAt }}</span>
+        </div>
+        <button>Delete Comment (Not functional)</button>
     </div>
+    <br>
+    {{/each}}
 </div>
-{{/each}}
-{{/if}}
-
-{{!-- {{#if games.comments }}
-<p>there is a comment</p>
-{{games}}
-{{/if}} --}}
-
-{{#if currentUser}}
-<div class="card">
-    <div class="card-content">
-        <h4 class="card-title">Add a comment:</h6>
-            <form method="POST" action="/tweet/{{id}}?_method=PUT" class="row">
-                <p class="input-field inline col s10">
-                    <label for="content"></label>
-                    <input type="text" name="content" id="">
-                </p>
-                <p class="input-field inline col s2">
-                    <input class="btn" type="submit" value="Submit">
-                </p>
-            </form>
-    </div>
-</div>
-{{/if }}
