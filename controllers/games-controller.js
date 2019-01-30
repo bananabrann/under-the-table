@@ -7,6 +7,7 @@ module.exports = {
       res.render("./games/show-one", { games });
     });
   },
+
   showAll: (req, res) => {
     Game.find({})
       .then(games => {
@@ -14,11 +15,13 @@ module.exports = {
       })
       .catch(err => console.log(err));
   },
+
   showNewPage: (req, res) => {
     console.log("showNewGameScreen activated");
     res.render("./games/new");
     // res.send("hi!")
   },
+
   create: (req, res) => {
     // create a thing
     Game.create({
@@ -53,9 +56,11 @@ module.exports = {
         });
       });
   },
+
   update: (req, res) => {
     // updating the game
   },
+
   destroy: (req, res) => {
     // removes game
   }
