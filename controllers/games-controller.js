@@ -2,9 +2,9 @@ const { Game } = require("../models/Game");
 
 module.exports = {
   showOne: (req, res) => {
-      Game.findOne({ "_id": req.params.id }).then(oneGame => {
+      Game.findOne({ "_id": req.params.id }).then(games => {
         // res.send(oneGame)
-          res.render("./games/show-one", {oneGame})
+          res.render("./games/show-one", {games})
       })
   },
   showAll: (req, res) => {

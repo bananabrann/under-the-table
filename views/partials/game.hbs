@@ -21,12 +21,12 @@
 
 <div class="game-block">
     <div class="game-block-info">
-        <h1>{{oneGame.title}}</h1>
-        <span class="game-block-rating">Rating: {{oneGame.rating}}</span>
-        <span class="game-block-category">Category: {{oneGame.rating}}</span>
-        <span class="game-block-compness"> Play Style: {{oneGame.compness}}</span>
+        <a class="game-title" href="/games/{{id}}"><h1>{{games.title}}{{title}}</h1></a>
+        <span class="game-block-rating">Rating: {{games.rating}}{{rating}}</span>
+        <span class="game-block-category">Category: {{games.rating}}{{rating}}</span>
+        <span class="game-block-compness"> Play Style: {{games.compness}}{{compness}}</span>
     </div>
 
-    <p>{{oneGame.description}}</p>
+    <p>{{games.description}}{{description}}</p>
     <div class="game-block-by-author"><h3>by{{oneGame.author}}</h3></div>
 </div>
