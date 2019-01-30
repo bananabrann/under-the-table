@@ -3,12 +3,12 @@
 
 {{!-- {{ oneGame }} --}}
 
-<div class="game-partial">
+{{!-- <div class="game-partial">
     <div class="content">
         <h1>
-            {{!-- <a class="game-title" href="{{id}}"> --}}
+<a class="game-title" href="{{id}}"> 
                 {{title}}
-            {{!-- </a> --}}
+</a>
         </h1>
     </div>
     <div class="actions">
@@ -17,4 +17,16 @@
         <span class="game__date">{{ createdAt }}</span>
         <span class="game_comments">{{ comments.length }} Comments</span>
     </div>
+</div> --}}
+
+<div class="game-block">
+    <div class="game-block-info">
+        <h1>{{oneGame.title}}</h1>
+        <span class="game-block-rating">Rating: {{oneGame.rating}}</span>
+        <span class="game-block-category">Category: {{oneGame.rating}}</span>
+        <span class="game-block-compness"> Play Style: {{oneGame.compness}}</span>
+    </div>
+
+    <p>{{oneGame.description}}</p>
+    <div class="game-block-by-author"><h3>by{{oneGame.author}}</h3></div>
 </div>
