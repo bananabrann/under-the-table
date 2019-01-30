@@ -1,4 +1,4 @@
-const { Game } = require("../models/Game");
+const { Game, Comment } = require("../models/Game");
 
 module.exports = {
   showOne: (req, res) => {
@@ -31,15 +31,27 @@ module.exports = {
     }).then(newGame => {
       res.redirect(`/games/${newGame._id}`);
     });
-    //   .then(newGame => {
-    //       res.redirect(`/games/${newGame._id}`)
-    //   })
-    //   .then(result => {
-    //       req.user.games.push(result)
-    //       req.user.save(err => {
-    //           res.redirect(`/games/${games.id}`)
-    //       })
-    //   })
+  },
+
+  addComment: (req, res) => {
+    let referenceGame = {};
+
+    Game.findOne({ _id: req.params.id })
+      .then(foundGame => {
+        referenceGame = foundGame;
+      })
+      .then(() => {
+        Comment.create({
+          content: req.body.content
+        }).then(x => {
+          console.log(x);
+          let newComment = x;
+          referenceGame.comments.push(newComment);
+          referenceGame.save(err => {
+            res.redirect(`/games/${referenceGame._id}`);
+          });
+        });
+      });
   },
   update: (req, res) => {
     // updating the game
