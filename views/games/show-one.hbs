@@ -2,7 +2,7 @@
 
 {{!-- <p class="card">
 </p> --}}
-    {{> 'game'}}
+{{> 'game'}}
 
 {{!-- <div class="actions">
     <a href="/games/{{ author.id }}" class="">
@@ -26,9 +26,10 @@
 
     <br>
 
-    {{#each oneGame.comments}}
+    {{#each games.comments}}
     <div class="individual-comments">
         <div class="individual-comments-content">
+            <p>begin comment</p>
             {{content}}
         </div>
         <div class="individual-comments-stats">
