@@ -57,8 +57,20 @@ module.exports = {
       });
   },
 
+  addCommentT: (req, res) => {
+
+  },
   update: (req, res) => {
-    // updating the game
+        let { content } = req.body;
+        Game.findOne({ _id: req.params.id }).then(foundGame => {
+          foundGame.comments.push({
+            content,
+            author: req.user._id
+          });
+          foundGame.save(err => {
+            res.redirect(`/games/${foundGame._id}`);
+          });
+        });
   },
 
   destroy: (req, res) => {
