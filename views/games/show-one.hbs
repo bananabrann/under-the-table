@@ -1,17 +1,9 @@
 <p>hello from games/show-one.hbs</p>
 
-{{!-- <p class="card">
-</p> --}}
+{{!-- structure of creating and reading a comment is Express Twitter. --}}
+{{!-- structure of update and delete is my code. --}}
+
 {{> 'game'}}
-
-{{!-- <div class="actions">
-    <a href="/games/{{ author.id }}" class="">
-        {{author.local.email}}</a> --}}
-    {{!-- <span class="game__date">{{ oneGame.createdAt }}</span> --}}
-    {{!-- <span class="game_comments">{{ comments.length }} Comments</span> --}}
-    {{!-- </div> --}}
-
-
 
 <div class="comments-section">
     <h2>Comments</h2>
@@ -20,7 +12,7 @@
     <div class="add-comment-section">
         <h3>Join the Conversation</h3>
 
-        <form method="POST" action="/games/{{games._id}}" class="row">
+        <form method="POST" action="/games/{{games._id}}" class="add-comment-form">
             <p class="add-comment-input-field">
                 {{!-- <label for="content"></label> --}}
                 <input type="text" name="content" id="">
@@ -29,14 +21,7 @@
                 <input class="btn" type="submit" value="Submit">
             </p>
         </form>
-{{!-- 
-        <textarea>Insert your comment here (Not Functional)</textarea>
-        <br>
-        <button>Add A Comment (Not Functional)</button> --}}
-
-        {{!-- add the ability to add a comment, remove a comment --}}
     </div>
-
     {{!-- {{/if}} --}}
 
     <br>
@@ -44,12 +29,11 @@
     {{#each games.comments}}
     <div class="individual-comments">
         <div class="individual-comments-content">
-            <p>begin comment</p>
             {{content}}
         </div>
         <div class="individual-comments-stats">
             <a href="/user/{{ author.id }}" class="">{{ author.local.email }}</a>
-            <span class="tweet__date">{{ createdAt }}</span>
+            <span class="game__date">{{ createdAt }}</span>
         </div>
         <button>Delete Comment (Not functional)</button>
     </div>
