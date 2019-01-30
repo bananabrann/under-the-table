@@ -1,41 +1,62 @@
 <p>hello from games/show-one.hbs</p>
 
-<p class="card">
-  {{> 'game'}}
-</p>
+{{!-- <p class="card">
+    {{> 'game'}}
+</p> --}}
 
-{{!-- {{}} --}}
+<div class="game-partial">
+    <div class="content">
+        <h1>
+            {{!-- <a class="game-title" href="{{id}}"> --}}
+                {{oneGame.title}}
+            {{!-- </a> --}}
+        </h1>
+    </div>
+    {{!-- <div class="actions">
+        <a href="/games/{{ author.id }}" class="">
+            {{author.local.email}}</a> --}}
+        {{!-- <span class="game__date">{{ oneGame.createdAt }}</span> --}}
+        {{!-- <span class="game_comments">{{ comments.length }} Comments</span> --}}
+    </div>
+</div>
+{{oneGame.comments}}
 
-{{#if comments.length}}
-  {{#each comments}}
-    <div class="card">
-      <div class="card-content">
+
+{{#if oneGame.comments.length}}
+{{#each comments}}
+<div class="card">
+    <div class="card-content">
         <span class="card-title">
-          {{ content }}
+            {{ content }}
         </span>
-      </div>
-      {{!-- this code is from Express Twitter --}}
-      <div class="card-action">
+    </div>
+    {{!-- this code is from Express Twitter --}}
+    <div class="card-action">
         <a href="/user/{{ author.id }}" class="">{{ author.local.email }}</a>
         <span class="tweet__date">{{ createdAt }}</span>
-      </div>
     </div>
-  {{/each}}
+</div>
+{{/each}}
 {{/if}}
+
+{{!-- {{#if games.comments }}
+<p>there is a comment</p>
+{{games}}
+{{/if}} --}}
 
 {{#if currentUser}}
 <div class="card">
-  <div class="card-content">
-    <h4 class="card-title">Add a comment:</h6>
-    <form method="POST" action="/tweet/{{id}}?_method=PUT" class="row">
-      <p class="input-field inline col s10">
-        <label for="content"></label>
-        <input type="text" name="content" id="">
-      </p>
-      <p class="input-field inline col s2">
-        <input class="btn" type="submit" value="Submit">
-      </p>
-    </form>
-  </div>
+    <div class="card-content">
+        <h4 class="card-title">Add a comment:</h6>
+            <form method="POST" action="/tweet/{{id}}?_method=PUT" class="row">
+                <p class="input-field inline col s10">
+                    <label for="content"></label>
+                    <input type="text" name="content" id="">
+                </p>
+                <p class="input-field inline col s2">
+                    <input class="btn" type="submit" value="Submit">
+                </p>
+            </form>
+    </div>
 </div>
 {{/if }}

@@ -1,15 +1,20 @@
 {{!-- this code concept is from Express Twitter --}}
 <p>hello from partials/game.hbs!</p>
+
+{{!-- {{ oneGame }} --}}
+
 <div class="game-partial">
     <div class="content">
-        <a class="game-title" href="{{id}}">
-            {{content}}
-        </a>
+        <h1>
+            {{!-- <a class="game-title" href="{{id}}"> --}}
+                {{title}}
+            {{!-- </a> --}}
+        </h1>
     </div>
     <div class="actions">
         <a href="/games/{{ author.id }}" class="">
-        {{author.local.email}}</a>
-            <span class="game__date">{{ createdAt }}</span>
-    <span class="game_comments">{{ comments.length }} Comments</span>
+            {{author.local.email}}</a>
+        <span class="game__date">{{ createdAt }}</span>
+        <span class="game_comments">{{ comments.length }} Comments</span>
     </div>
 </div>
