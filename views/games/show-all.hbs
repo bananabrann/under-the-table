@@ -1,16 +1,21 @@
 <p>Hello from show-all.hbs!</p>
 <h3>Full Games List</h3>
 {{#if games}}
-<ul class="games">
+<div class="show-all-games-block">
     {{#each games}}
-    <div class="game-block">
-        <div class="game-block-header">
-            <h4>{{ title }}</h4>
-            <h2>Stars: {{ rating }}</h2>
-        </div>
-        <p>{{description}}</p>
-        {{!-- {{> 'game'}} --}}
+
+    <div class="show-all-games-each">
+        <span class="show-all-games-each-header">
+            <a class="show-all-game-title" href="{{id}}"> {{ title }} </a>
+            Stars: {{ rating }}
+        </span>
+        <span class="show-all-games-each-body">
+            {{type}}
+            {{compness}}
+        </span>
     </div>
+    <br>
     {{/each}}
-</ul>
+
+</div>
 {{/if}}
