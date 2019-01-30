@@ -1,0 +1,13 @@
+<div class="game-partial">
+    <div class="content">
+        <a class="game-title" href="{{id}}">
+            {{content}}
+        </a>
+    </div>
+    <div class="actions">
+        <a href="/games/{{ author.id }}" class="">
+        {{author.local.email}}</a>
+            <span class="game__date">{{ createdAt }}</span>
+    <span class="game_comments">{{ comments.length }} Comments</span>
+    </div>
+</div>
