@@ -4,9 +4,9 @@
 
 <section class="form-container">
     <h4>New Game</h4>
-    <form action="/games" method="post" id="new-game-form">
+    <form action="/games/new" method="post" id="new-game-form">
         <div class="new-game-input-field" id="input-title">
-            <h3 class="new-game-subtitle">Title:</h3> <input type="text" name="game[title]">
+            <h3 class="new-game-subtitle">Title:</h3> <input type="text" name="games[title]">
         </div>
 
         <div class="new-game-input-field" id="input-description">
@@ -26,7 +26,7 @@
             <h3 class="new-game-subtitle">Type:</h3>
             <select name="type" form="new-game-form">
                 <option value="party">Party</option>
-                <option value="game">Game</option>
+                <option value="strategy">Strategy</option>
             </select>
         </span>
 

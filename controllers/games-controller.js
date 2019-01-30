@@ -16,18 +16,21 @@ module.exports = {
   },
   showNewPage: (req, res) => {
     console.log("showNewGameScreen activated");
-    res.render("./games/new")
+    res.render("./games/new");
     // res.send("hi!")
   },
   create: (req, res) => {
-      // create a thing
-      Game.create({
-          title: req.body.games.content,
-          description: req.body.games.description,
-          type: req.body.games.type,
-        //   author: req.user._id,
-          compness: req.body.games.compness
-      })
+    // create a thing
+    Game.create({
+      title: req.body.games.title,
+      description: req.body.games.description,
+      rating: req.body.games.rating,
+      type: req.body.games.type,
+      //   author: req.user._id,
+      compness: req.body.games.compness
+    }).then(newGame => {
+      res.redirect(`/games/${newGame._id}`);
+    });
     //   .then(newGame => {
     //       res.redirect(`/games/${newGame._id}`)
     //   })
