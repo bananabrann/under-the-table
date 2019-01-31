@@ -1,0 +1,17 @@
+.individual-comments {
+  background-color: #333333;
+  color: #ffc857;
+  font-family: "Source Code Pro", monospace;
+  max-width: 370px;
+  border-radius: 4px;
+}
+
+.individual-comments-content {
+  font-size: 20;
+  margin: 2px 5px 2px 5px;
+}
+
+.individual-comments-stats > .game__date {
+  font-size: 10px;
+  margin: 0 auto;
+}
