@@ -1,19 +1,20 @@
-<p>hello from games/show-one.hbs</p>
-
 {{!-- structure of creating and reading a comment is Express Twitter. --}}
 {{!-- structure of update and delete is my code. --}}
-{{games.id}}
 
 {{!-- Why does this not work? --}}
 {{!-- <button method="POST" type="submit" class="delete-btn" action="/games/{{ games.id }}?_method=DELETE">Delete
     button</button> --}}
-<form method="post" action="/games/{{ games.id }}?_method=DELETE">
-    <input type="submit" value="Delete in form" class="btn">
-</form>
+
 
 {{> 'game'}}
 
-<button class="btn" onclick="location.href = '/games/edit/{{games.id}}';">Edit Game</button>
+<div class="edit-and-delete">
+    <button class="btn" onclick="location.href = '/games/edit/{{games.id}}';">Edit Game</button>
+    <form method="post" action="/games/{{ games.id }}?_method=DELETE">
+        <input type="submit" value="Delete in form" class="btn">
+    </form>
+</div>
+
 
 <div class="comments-section">
     <h2>Comments</h2>
@@ -31,7 +32,7 @@
                 <input class="btn" type="submit" value="Submit">
             </p>
         </form>
-            
+
     </div>
     {{!-- {{/if}} --}}
 
