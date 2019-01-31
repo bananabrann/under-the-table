@@ -3,7 +3,10 @@
 {{!-- structure of creating and reading a comment is Express Twitter. --}}
 {{!-- structure of update and delete is my code. --}}
 {{games.id}}
-<button class="delete-btn" action="/games/{{ games.id }}?_method=DELETE">Delete button</button>
+
+{{!-- Why does this not work? --}}
+{{!-- <button method="POST" type="submit" class="delete-btn" action="/games/{{ games.id }}?_method=DELETE">Delete button</button> --}}
+
 
 <form method="post" action="/games/{{ games.id }}?_method=DELETE">
     <input type="submit" value="Delete in form" class="btn">

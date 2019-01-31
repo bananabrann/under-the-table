@@ -2,10 +2,25 @@ const { Game, Comment } = require("../models/Game");
 
 module.exports = {
   showOne: (req, res) => {
+    // this code is messy because I tried to sort the comments in order
+
     Game.findOne({ _id: req.params.id }).then(games => {
-      // res.send(oneGame)
       res.render("./games/show-one", { games });
-    });
+    })
+
+    // JOURNEY TO SORTING THE COMMENTS NEWEST TO OLDEST
+
+    // let games = {};
+    //   //   .limit(5)
+
+    //   .then(result => {
+    //     games = result;
+
+    //     // let commentSection = result.comments;
+    //     // .sort({ createdAt: -1 })
+    //   });
+
+    // });
   },
 
   showAll: (req, res) => {
@@ -57,7 +72,7 @@ module.exports = {
       });
   },
 
-  addCommentT: (req, res) => {},
+  //   addCommentT: (req, res) => {},
   update: (req, res) => {
     let { content } = req.body;
     Game.findOne({ _id: req.params.id }).then(foundGame => {
