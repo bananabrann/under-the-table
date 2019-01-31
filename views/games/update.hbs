@@ -5,11 +5,11 @@
     <h4>Update {{fish.title}}</h4>
     <form method="POST" id="update-game-form" action="/games/edit/{{ fish.id }}?_method=PUT">
         <div class="new-game-input-field" id="input-title">
-            <h3 class="new-game-subtitle">Title:</h3> <input type="text" name="games[title]">
+            <h3 class="new-game-subtitle">Title:</h3> <input type="text" name="title">
         </div>
 
         <div class="new-game-input-field" id="input-description">
-            <h3 class="new-game-subtitle">Description:</h3><textarea name="games[description]" cols="30" rows="10" placeholder="Description"></textarea>
+            <h3 class="new-game-subtitle">Description:</h3><textarea name="description" cols="30" rows="10" placeholder="Description"></textarea>
         </div>
 
         <span class="new-game-input-field" id="input-rating">

@@ -13,11 +13,16 @@ module.exports = {
     //   console.log("edit-controller's update has been triggered")
     // res.send("sent from edit-controller update!")
     // res.render("./games/")
-    Game.findOneAndUpdate({_id: req.params.id}, {$set:{title: "hi"}}, {new: true}, (err, doc) => {
+
+
+    // {$set:{title: "hi"}}
+
+    Game.findOneAndUpdate({_id: req.params.id}, req.body, {new: true}, (err, doc) => {
         if (err) {
             console.log("something went wrong")
         }
         console.log("done!")
+        console.log(req.body)
     })
     // .then(theGame => {
         // console.log("Routing to ");
