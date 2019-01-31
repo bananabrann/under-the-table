@@ -7,16 +7,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Under the Table</title>
 
-<link rel="stylesheet" type="text/css" href="css/switchboard.css" />
+    <link rel="stylesheet" type="text/css" href="/css/switchboard.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+    {{!-- font-family: 'Major Mono Display', monospace; --}}
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    {{!-- font-family: 'Josefin Sans', sans-serif; --}}
+
 </head>
 
 <body>
+
     <header>
-        <h1>Under the Table</h1>
-        <h2>My awesome game</h2>
+        <div class="header-bar">
+            <h1>under the Table</h1>
+            <h2>Table-Top Games List</h2>
+        </div>
         <nav>
-            <button onclick="location.href = '/';">Go Home</button>
-            <button onclick="location.href = '/games';">See All Games</button>
+            <button class="btn" onclick="location.href = '/';">Go Home</button>
+            <button class="btn" onclick="location.href = '/games';">See All Games</button>
         </nav>
     </header>
     <div class="main">{{{ body }}}</div>

@@ -45,6 +45,8 @@ app.use(passport.session());
 
 hbs.registerPartials(__dirname + "/views/partials");
 app.use(express.static("public"));
+// app.use(express.static(path.join(__dirname, "/public")));
+
 app.set("view engine", "hbs");
 app.use(methodOverride("_method"));
 

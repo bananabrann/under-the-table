@@ -1,8 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-console.log("Stepped into homepage router...")
-
+console.log("Stepped into homepage router...");
 
 const homepageController = require("../controllers/homepage-controller");
 

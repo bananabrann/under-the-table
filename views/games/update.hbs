@@ -4,15 +4,16 @@
 <section class="form-container">
     <h4>Update {{fish.title}}</h4>
     <form method="POST" id="update-game-form" action="/games/edit/{{ fish.id }}?_method=PUT">
-        <div class="new-game-input-field" id="input-title">
+
+        <div class="field-flex">
             <h3 class="new-game-subtitle">Title:</h3> <input type="text" name="title" placeholder={{fish.title}}>
         </div>
 
-        <div class="new-game-input-field" id="input-description">
+        <div class="field-fixed">
             <h3 class="new-game-subtitle">Description:</h3><textarea name="description" placeholder="{{fish.description}}"></textarea>
         </div>
 
-        <span class="new-game-input-field" id="input-rating">
+        <span class="field-flex">
             <h3 class="new-game-subtitle">Rating:</h3>
             <select name="rating" form="new-game-form">
                 <option selected disabled>Select A Rating</option>
@@ -22,7 +23,7 @@
             </select>
         </span>
 
-        <span class="new-game-input-field" id="input-type">
+        <span class="field-flex">
             <h3 class="new-game-subtitle">Type:</h3>
             <select name="type" form="new-game-form">
                 <option selected disabled>Select A Type</option>
@@ -31,7 +32,7 @@
             </select>
         </span>
 
-        <span class="new-game-input-field" id="input-compness">
+        <span class="field-flex">
             <h3 class="new-game-subtitle">Competitiveness:</h3>
             <select name="compness" form="new-game-form">
                 <option selected disabled>Select Playstyle</option>

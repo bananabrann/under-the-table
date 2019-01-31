@@ -1,0 +1,36 @@
+h1 {
+    /* font-family: 'Dosis', sans-serif; */
+    font-family: 'Major Mono Display', monospace;
+    font-size: 30px;
+    color: #333333;
+
+    padding: 8px;
+    margin: 0px;
+}
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 14px;
+    color: #ED6A5A;
+    padding: 8px;
+    margin: 0px;
+}
+
+.header-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    background-color: #546A76;
+}
+
+nav {
+    margin: 20px 0px 20px 0px;
+    padding: 20px;
+    background-color: red;
+}
+
+/* 
+.btn {
+
+} */

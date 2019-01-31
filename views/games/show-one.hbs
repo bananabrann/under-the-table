@@ -5,16 +5,13 @@
 {{games.id}}
 
 {{!-- Why does this not work? --}}
-{{!-- <button method="POST" type="submit" class="delete-btn" action="/games/{{ games.id }}?_method=DELETE">Delete button</button> --}}
-
-
+{{!-- <button method="POST" type="submit" class="delete-btn" action="/games/{{ games.id }}?_method=DELETE">Delete
+    button</button> --}}
 <form method="post" action="/games/{{ games.id }}?_method=DELETE">
     <input type="submit" value="Delete in form" class="btn">
 </form>
 
-
 {{> 'game'}}
-
 
 <div class="comments-section">
     <h2>Comments</h2>

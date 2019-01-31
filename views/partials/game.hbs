@@ -6,9 +6,9 @@
 {{!-- <div class="game-partial">
     <div class="content">
         <h1>
-<a class="game-title" href="{{id}}"> 
+            <a class="game-title" href="{{id}}">
                 {{title}}
-</a>
+            </a>
         </h1>
     </div>
     <div class="actions">
@@ -20,13 +20,19 @@
 </div> --}}
 
 <div class="game-block">
-    <div class="game-block-info">
-        <a class="game-title" href="games/{{id}}"><h1>{{games.title}}{{title}}</h1></a>
+    <div class="game-block-header">
+        <a class="game-title" href="games/{{id}}">
+            <h1>{{games.title}}{{title}}</h1>
+        </a>
         <span class="game-block-rating">Rating: {{games.rating}}{{rating}}</span>
         <span class="game-block-category">Type: {{games.type}}{{type}}</span>
         <span class="game-block-compness"> Play Style: {{games.compness}}{{compness}}</span>
     </div>
-    <p>{{games.description}}{{description}}</p>
-    <button onclick="location.href = '/games/edit/{{games.id}}';">Edit Game</button>
-    {{!-- <div class="game-block-by-author"><h3>by{{oneGame.author}}</h3></div> --}}
+    <div class="game-block-content">
+        <p>{{games.description}}{{description}}</p>
+    <button class="btn" onclick="location.href = '/games/edit/{{games.id}}';">Edit Game</button>
+    </div>
+    {{!-- <div class="game-block-by-author">
+        <h3>by{{oneGame.author}}</h3>
+    </div> --}}
 </div>

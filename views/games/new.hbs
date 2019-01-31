@@ -5,15 +5,15 @@
 <section class="form-container">
     <h4>New Game</h4>
     <form action="/games/new" method="post" id="new-game-form">
-        <div class="new-game-input-field" id="input-title">
+        <div class="field-flex">
             <h3 class="new-game-subtitle">Title:</h3> <input type="text" name="games[title]">
         </div>
 
-        <div class="new-game-input-field" id="input-description">
+        <div class="field-fixed">
             <h3 class="new-game-subtitle">Description:</h3><textarea name="games[description]" cols="30" rows="10" placeholder="Description"></textarea>
         </div>
 
-        <span class="new-game-input-field" id="input-rating">
+        <span class="field-flex">
             <h3 class="new-game-subtitle">Rating:</h3>
             <select name="games[rating]" form="new-game-form">
                 <option selected disabled>Select A Rating</option>
@@ -23,7 +23,7 @@
             </select>
         </span>
 
-        <span class="new-game-input-field" id="input-type">
+        <span class="field-flex">
             <h3 class="new-game-subtitle">Type:</h3>
             <select name="games[type]" form="new-game-form">
                 <option selected disabled>Select A Type</option>
@@ -32,7 +32,7 @@
             </select>
         </span>
 
-        <span class="new-game-input-field" id="input-compness">
+        <span class="field-flex">
             <h3 class="new-game-subtitle">Competitiveness:</h3>
             <select name="games[compness]" form="new-game-form">
                 <option selected disabled>Select Playstyle</option>
@@ -42,6 +42,7 @@
         </span>
 
         <br>
-        <input type="submit" value="Submit" class="btn">
+
+        <input class="btn" type="submit" value="Submit" class="btn">
     </form>
 </section>
