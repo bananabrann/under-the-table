@@ -1,0 +1,12 @@
+.game-block {
+    background-color: #EDE3E4;
+    border: 3px solid #333333;
+    border-radius: 5px;
+
+    max-width: 600px;
+}
+
+
+.game-block > * {
+    margin: 6px 12px 16px 12px;
+}

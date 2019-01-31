@@ -4,15 +4,11 @@
 <div class="show-all-games-block">
     {{#each games}}
 
-    <div class="game-block">
-        <span class="show-all-game-block">
-            <a class="game-title" href="/games/{{id}}"><p> {{ title }} </p></a>
-            <p class="game-rating">{{ rating }} stars</p>
-        </span>
-        <span class="show-all-game-block">
-            {{type}}
-            {{compness}}
-        </span>
+    <div class="mini-game-block">
+            <a class="mini-game-title" href="/games/{{id}}"><p> {{ title }} </p></a>
+            <p class="mini-game-rating">{{ rating }} stars</p>
+            <p>{{type}}</p>
+            <p>{{compness}}</p>
     </div>
     <br>
     {{/each}}
