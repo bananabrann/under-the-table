@@ -5,6 +5,11 @@ body {
   margin: 0px;
 }
 
+.main {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 .btn {
   font-family: "Source Code Pro", monospace;
   background-color: #89b6a5;
