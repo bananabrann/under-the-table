@@ -1,25 +1,18 @@
 body {
-  /* background-color: rgb(170, 191, 192); */
-
   background-color: #f8f8fa;
   color: #333333;
   width: 100%;
-  margin-left: 40px;
+  margin: 0px;
 }
 
 .btn {
-  background-color: #546A76;
+  background-color: #546a76;
   text-transform: uppercase;
   color: #f8f8fa;
   padding: 6px;
   border-radius: 10px;
 }
 
-.main h1,h2 {
-font-family: 'Josefin Sans', sans-serif;
-}
-
 p {
-    color: #333333;
+  color: #333333;
 }
-
