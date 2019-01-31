@@ -3,6 +3,8 @@ const router = express.Router();
 
 const gamesController = require("../controllers/games-controller");
 
+console.log("Stepped into games router...")
+
 router.use("/edit", require("./edit"))
 
 router.get("/", gamesController.showAll);

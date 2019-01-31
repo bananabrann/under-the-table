@@ -1,1 +1,46 @@
 <p> hello from update.hbs!</p>
+{{!-- action='/games/edit/:id' --}}
+
+<section class="form-container">
+    <h4>Update {{fish.title}}</h4>
+    <form method="POST" id="update-game-form" action="/games/edit/{{ fish.id }}?_method=PUT">
+        <div class="new-game-input-field" id="input-title">
+            <h3 class="new-game-subtitle">Title:</h3> <input type="text" name="games[title]">
+        </div>
+
+        <div class="new-game-input-field" id="input-description">
+            <h3 class="new-game-subtitle">Description:</h3><textarea name="games[description]" cols="30" rows="10" placeholder="Description"></textarea>
+        </div>
+
+        <span class="new-game-input-field" id="input-rating">
+            <h3 class="new-game-subtitle">Rating:</h3>
+            <select name="games[rating]" form="new-game-form">
+                <option selected disabled>Select A Rating</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </span>
+
+        <span class="new-game-input-field" id="input-type">
+            <h3 class="new-game-subtitle">Type:</h3>
+            <select name="games[type]" form="new-game-form">
+                <option selected disabled>Select A Type</option>
+                <option value="party">Party</option>
+                <option value="strategy">Strategy</option>
+            </select>
+        </span>
+
+        <span class="new-game-input-field" id="input-compness">
+            <h3 class="new-game-subtitle">Competitiveness:</h3>
+            <select name="games[compness]" form="new-game-form">
+                <option selected disabled>Select Playstyle</option>
+                <option value="Co-op">Co-op</option>
+                <option value="PvP">PvP</option>
+            </select>
+        </span>
+
+        <br>
+        <input type="submit" value="Submit" class="btn">
+    </form>
+</section>
