@@ -15,6 +15,11 @@
     /* background-color: blue; */
 }
 
+.mini-game-block a > p:hover {
+    text-decoration: none;
+    color: #ffc857;
+}
+
 .mini-game-block p:nth-last-child(3) {
     grid-row: 1 / span 1;
     grid-column: 3 / span 1;

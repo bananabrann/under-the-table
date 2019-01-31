@@ -11,7 +11,7 @@
 <div class="edit-and-delete">
     <button class="btn" onclick="location.href = '/games/edit/{{games.id}}';">Edit Game</button>
     <form method="post" action="/games/{{ games.id }}?_method=DELETE">
-        <input type="submit" value="Delete in form" class="btn">
+        <input type="submit" value="Delete" class="btn delete-btn">
     </form>
 </div>
 

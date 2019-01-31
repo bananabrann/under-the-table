@@ -1,0 +1,24 @@
+.delete-btn {
+    background-color: rgb(175, 40, 40);
+}
+.edit-and-delete {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* a,h1:hover {
+    color: #b5fed9;
+  } */
+
+
+
+.game-title h1 {
+font-family: 'Major Mono Display', monospace;
+    /* background-color: yellow; */
+    text-decoration: none;
+}
+
+.game-block .game-block-header > a {
+    text-decoration: none;
+    color: #333333;
+}
