@@ -57,23 +57,24 @@ module.exports = {
       });
   },
 
-  addCommentT: (req, res) => {
-
-  },
+  addCommentT: (req, res) => {},
   update: (req, res) => {
-        let { content } = req.body;
-        Game.findOne({ _id: req.params.id }).then(foundGame => {
-          foundGame.comments.push({
-            content,
-            author: req.user._id
-          });
-          foundGame.save(err => {
-            res.redirect(`/games/${foundGame._id}`);
-          });
-        });
+    let { content } = req.body;
+    Game.findOne({ _id: req.params.id }).then(foundGame => {
+      foundGame.comments.push({
+        content,
+        author: req.user._id
+      });
+      foundGame.save(err => {
+        res.redirect(`/games/${foundGame._id}`);
+      });
+    });
   },
 
   destroy: (req, res) => {
-    // removes game
+    console.log("destroy method triggered! boom");
+    Game.findOneAndRemove({ _id: req.params.id }).then(() => {
+      res.redirect("/games");
+    });
   }
 };

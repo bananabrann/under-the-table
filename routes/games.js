@@ -16,7 +16,7 @@ router.post("/new", gamesController.create);
 
 router.get("/:id", gamesController.showOne);
 router.post("/:id", gamesController.addComment);
-
 router.delete("/:id", gamesController.destroy);
+
 
 module.exports = router;
