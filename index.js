@@ -57,16 +57,22 @@ app.use(bodyParser.json());
 
 app.use(require("./routes/switchboard"));
 
-// app.set("port", process.env.PORT || 3000);
 
-// app.listen(app.get("port"), () => {
-//   console.log(`PORT: ${app.get("port")}`);
-// });
+// GA solution: 
+
+app.set("port", process.env.PORT || 3000);
+
+app.listen(app.get("port"), () => {
+  console.log(`PORT: ${app.get("port")}`);
+});
+
+
+
+
+// Stack Overflow popular solution:
 
 // const host = '0.0.0.0';
 // const port = process.env.PORT || 3000;
-app.listen(process.env.PORT)
-
 // app.listen(port, host, function() {
 //     console.log("Server started.......");
 //   });
@@ -74,4 +80,4 @@ app.listen(process.env.PORT)
 
 
 // from JSON:
-// "test": "echo \"Error: no test specified\" && exit 1",
+// "start": "node index.js"
