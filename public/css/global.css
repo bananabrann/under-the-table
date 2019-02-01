@@ -18,7 +18,6 @@ body {
   border-radius: 10px;
 }
 
-
 button:hover {
   background-color: #ffc857;
 }
@@ -30,7 +29,6 @@ a {
   text-decoration: none;
   /* color: #B5FED9; */
 }
-
 
 p {
   /* font-family: "Source Code Pro", monospace; */

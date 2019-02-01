@@ -2,20 +2,19 @@
   background-color: rgb(243, 243, 243);
   box-shadow: 4px 4px rgb(231, 231, 231);
   color: #333333;
-  
+
   font-family: "Source Code Pro", monospace;
   max-width: 370px;
   border-radius: 4px;
 }
 
 .individual-comments-content {
-    padding: 12px;
+  padding: 12px;
 }
 
 .individual-comments-text {
   font-size: 20;
   margin: 2px 5px 2px 5px;
-  
 }
 
 .individual-comments-stats > .game__date {
