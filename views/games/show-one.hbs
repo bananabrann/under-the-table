@@ -17,16 +17,16 @@
 
 
 <div class="comments-section">
-    <h2>Comments</h2>
+    <h2>Comment</h2>
 
     {{!-- {{#if currentUser }} --}}
     <div class="add-comment-section">
-        <h3>Join the Conversation</h3>
+        {{!-- <h3>Join the Conversation</h3> --}}
 
         <form method="POST" action="/games/{{games._id}}" class="add-comment-form">
             <p class="add-comment-input-field">
                 {{!-- <label for="content"></label> --}}
-                <input type="text" name="content" id="">
+                <input type="text" name="content" placeholder="Say something!" id="">
             </p>
             <p class="add-comment-submit-btn">
                 <input class="btn" type="submit" value="Submit">
@@ -41,11 +41,13 @@
     {{#each games.comments}}
     <div class="individual-comments">
         <div class="individual-comments-content">
-            {{content}}
-        </div>
-        <div class="individual-comments-stats">
-            <a href="/user/{{ author.id }}" class="">{{ author.local.email }}</a>
-            <span class="game__date">{{ createdAt }}</span>
+            <div class="individual-comments-text">
+                {{content}}
+            </div>
+            <div class="individual-comments-stats">
+                <a href="/user/{{ author.id }}" class="">{{ author.local.email }}</a>
+                <span class="game__date">{{ createdAt }}</span>
+            </div>
         </div>
         {{!-- <button>Delete Comment (Not functional)</button> --}}
     </div>
