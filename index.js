@@ -46,10 +46,8 @@ app.use(passport.session());
 hbs.registerPartials(__dirname + "/views/partials");
 app.use(express.static("public"));
 // app.use(express.static(path.join(__dirname, "/public")));
-
 app.set("view engine", "hbs");
 app.use(methodOverride("_method"));
-
 app.use(
   bodyParser.urlencoded({
     extended: true
@@ -58,6 +56,8 @@ app.use(
 app.use(bodyParser.json());
 
 app.use(require("./routes/switchboard"));
-// app.use(require("./controllers/nav-controller"));
 
-app.listen(3000, () => console.log("server is running"));
+app.set("port", process.env.PORT || 3000);
+app.listen(app.get("port"), () => {
+  console.log(`PORT: ${app.get("port")}`);
+});
