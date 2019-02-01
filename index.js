@@ -58,6 +58,10 @@ app.use(bodyParser.json());
 app.use(require("./routes/switchboard"));
 
 app.set("port", process.env.PORT || 3000);
+
 app.listen(app.get("port"), () => {
   console.log(`PORT: ${app.get("port")}`);
 });
+
+// from JSON:
+// "test": "echo \"Error: no test specified\" && exit 1",
