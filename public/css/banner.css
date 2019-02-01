@@ -6,6 +6,8 @@ header h1 {
     color: #F8F8FA;
     padding: 8px;
     margin: 0px;
+
+    text-shadow: 3px 3px black;
 }
 
 header h2 {
@@ -14,6 +16,8 @@ header h2 {
     color: #F8F8FA;
     padding: 8px;
     margin: -10px 0px 0px 0px;
+
+    text-shadow: 3px 3px black;
 }
 
 .header-bar {
