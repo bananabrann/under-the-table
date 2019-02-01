@@ -57,11 +57,17 @@ app.use(bodyParser.json());
 
 app.use(require("./routes/switchboard"));
 
-app.set("port", process.env.PORT || 3000);
+// app.set("port", process.env.PORT || 3000);
 
-app.listen(app.get("port"), () => {
-  console.log(`PORT: ${app.get("port")}`);
-});
+// app.listen(app.get("port"), () => {
+//   console.log(`PORT: ${app.get("port")}`);
+// });
+
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
+app.listen(port, host, function() {
+    console.log("Server started.......");
+  });
 
 // from JSON:
 // "test": "echo \"Error: no test specified\" && exit 1",
