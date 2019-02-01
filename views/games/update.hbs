@@ -1,21 +1,19 @@
 <p> hello from update.hbs!</p>
 {{!-- action='/games/edit/:id' --}}
 
-<section class="form-container">
-    <h4>Update {{fish.title}}</h4>
-    <form method="POST" id="update-game-form" action="/games/edit/{{ fish.id }}?_method=PUT">
+<h4>Update {{fish.title}}</h4>
 
-        <div class="field-flex">
-            <h3 class="new-game-subtitle">Title:</h3> 
+<form method="POST" id="update-game-form" action="/games/edit/{{ fish.id }}?_method=PUT">
+
+    <div class="form-grid-container">
+
+        <div class="field-title">
+            <h3>Title:</h3>
             <input type="text" name="title" rows="2" cols="60" value="{{fish.title}}" placeholder="Title">
         </div>
 
-        <div class="field-fixed">
-            <h3 class="new-game-subtitle">Description:</h3><textarea name="description" rows ="10" cols="60" placeholder="Description">{{fish.description}}</textarea>
-        </div>
-
-        <span class="field-flex">
-            <h3 class="new-game-subtitle">Rating:</h3>
+        <span class="field-rating">
+            <h3>Rating:</h3>
             <select name="rating" form="new-game-form">
                 <option selected disabled>Select A Rating</option>
                 <option value="1">1</option>
@@ -24,7 +22,7 @@
             </select>
         </span>
 
-        <span class="field-flex">
+        <span class="field-type">
             <h3 class="new-game-subtitle">Type:</h3>
             <select name="type" form="new-game-form">
                 <option selected disabled>Select A Type</option>
@@ -33,7 +31,7 @@
             </select>
         </span>
 
-        <span class="field-flex">
+        <span class="field-compness">
             <h3 class="new-game-subtitle">Competitiveness:</h3>
             <select name="compness" form="new-game-form">
                 <option selected disabled>Select Playstyle</option>
@@ -43,6 +41,12 @@
         </span>
 
         <br>
-        <input type="submit" value="Submit" class="btn">
-    </form>
-</section>
+    </div>
+
+    <div class="field-description">
+        <h3>Description:</h3><textarea name="description" rows="10" cols="60" placeholder="Description">{{fish.description}}</textarea>
+    </div>
+
+    <br>
+    <input type="submit" value="Submit" class="btn">
+</form>

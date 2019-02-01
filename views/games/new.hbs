@@ -2,19 +2,16 @@
     hello from games/new.hbs
 </p>
 
-<section class="form-container">
-    <h4>New Game</h4>
-    <form action="/games/new" method="post" id="new-game-form">
-        <div class="field-flex">
-            <h3 class="new-game-subtitle">Title:</h3> <input type="text" name="games[title]">
+<h4>New Game</h4>
+<form action="/games/new" method="post" id="new-game-form">
+
+    <div class="form-grid-container">
+        <div class="field-title">
+            <h3>Title:</h3> <input type="text" name="games[title]">
         </div>
 
-        <div class="field-fixed">
-            <h3 class="new-game-subtitle">Description:</h3><textarea name="games[description]" cols="60" rows="10" placeholder="Description"></textarea>
-        </div>
-
-        <span class="field-flex">
-            <h3 class="new-game-subtitle">Rating:</h3>
+        <span class="field-rating">
+            <h3>Rating:</h3>
             <select name="games[rating]" form="new-game-form">
                 <option selected disabled>Select A Rating</option>
                 <option value="1">1</option>
@@ -23,7 +20,7 @@
             </select>
         </span>
 
-        <span class="field-flex">
+        <span class="field-type">
             <h3>Type:</h3>
             <select name="games[type]" form="new-game-form">
                 <option selected disabled>Select A Type</option>
@@ -32,7 +29,7 @@
             </select>
         </span>
 
-        <span class="field-flex">
+        <span class="field-compness">
             <h3 class="new-game-subtitle">Competitiveness:</h3>
             <select name="games[compness]" form="new-game-form">
                 <option selected disabled>Select Playstyle</option>
@@ -42,7 +39,11 @@
         </span>
 
         <br>
+    </div>
 
-        <input class="btn" type="submit" value="Submit" class="btn">
-    </form>
-</section>
+    <div class="field-description">
+        <h3>Description:</h3><textarea name="games[description]" cols="60" rows="10" placeholder="Description"></textarea>
+    </div>
+
+    <input class="btn" type="submit" value="Submit" class="btn">
+</form>
