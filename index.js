@@ -63,11 +63,15 @@ app.use(require("./routes/switchboard"));
 //   console.log(`PORT: ${app.get("port")}`);
 // });
 
-const host = '0.0.0.0';
-const port = process.env.PORT || 3000;
-app.listen(port, host, function() {
-    console.log("Server started.......");
-  });
+// const host = '0.0.0.0';
+// const port = process.env.PORT || 3000;
+app.listen(process.env.PORT)
+
+// app.listen(port, host, function() {
+//     console.log("Server started.......");
+//   });
+
+
 
 // from JSON:
 // "test": "echo \"Error: no test specified\" && exit 1",
